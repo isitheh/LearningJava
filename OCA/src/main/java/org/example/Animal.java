@@ -1,5 +1,8 @@
 package org.example;
 
+/*
+ * @Author: Sithembiso Sithole
+ */
 public class Animal {
     //Attributes - Variable
     String name;
