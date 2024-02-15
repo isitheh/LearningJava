@@ -16,6 +16,7 @@ public class Main {
         System.out.println("Print a random number between 0-9. Random number: " + random.nextInt(10)); //Print a random number between 0-9.
 
         //Using the transport package. Creating objects
+        System.out.println("All our cars have a maximum number of wheels set to: " + Car.MAX_WHEELS);
         Car mHonda = new Car();
         mHonda.setMake("Honda");
         mHonda.setMaxSpeed(100);
@@ -31,5 +32,7 @@ public class Main {
         mMercedes.setMaxSpeed(220);
         System.out.println("The third car is a " + mMercedes.getMake() + " and can travel at max speed of "
                 + mMercedes.getMaxSpeed() + "km/hr");
+
+        Primitives primitives = new Primitives();
     }
 }

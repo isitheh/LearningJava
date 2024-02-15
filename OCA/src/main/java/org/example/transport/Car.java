@@ -8,6 +8,9 @@ public class Car {
     String make;
     int maxSpeed;
 
+    //Declare a static/class variable
+    public static int MAX_WHEELS = 4;
+
     //Instance initializer block is executed first at run time before the constructor.
     {
         System.out.println("instance initializer block invoked");
