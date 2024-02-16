@@ -34,5 +34,28 @@ public class Main {
                 + mMercedes.getMaxSpeed() + "km/hr");
 
         Primitives primitives = new Primitives();
+        ReferencesAndObjects();
+    }
+
+    /*
+    * To learn more about references and objects, in our function ReferencesAndObjects
+    * we write what is happening before and after each line of code presented.
+    */
+    private static void ReferencesAndObjects() {
+        //Created references stringOne and stringTwo which can map to string objects
+        String stringOne, stringTwo;
+        //An object of type String "a" is then assigned to the stringOne reference.
+        //The stringOne reference now maps to this object in the Java heap memory.
+        stringOne = "a";
+        //An object of type String "b" is then assigned to the stringTwo reference.
+        //The stringTwo reference now maps to this object in the Java heap memory.
+        stringTwo = "b";
+        //The object mapped to reference stringTwo is now also mapped to stringOne
+        stringOne = stringTwo;
+        //Created a reference stringThree which can map to a string object
+        //The object mapped to reference stringOne is now also mapped to stringThree
+        String stringThree = stringOne;
+        //The reference stringOne is now mapped to a null
+        stringOne = null;
     }
 }
