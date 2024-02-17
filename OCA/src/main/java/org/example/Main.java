@@ -58,4 +58,17 @@ public class Main {
         //The reference stringOne is now mapped to a null
         stringOne = null;
     }
+
+    /*
+     * OCA practice questions
+     */
+    private static void ocaPracticeQuestions() {
+        //Identifiers
+        int A$B = 10;           //Valid - $ is valid in identifiers.
+        int _helloword = 1;     //Valid - underscore is valid in identifiers
+        //int true = 0;         //Invalid - true is a reserved Java keyword
+        //int  java.lang = 0;   //Invalid - dot not valid in identifiers.
+        int Public = 0;         //Valid - public is a reserved keyword but not Public
+        //int 1980_s = 0;       //Invalid - Identifier may not start with a number
+    }
 }
