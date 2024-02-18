@@ -91,5 +91,28 @@ public class Main {
         //numPets.length();         //Primitves do not allow methods to be called on them
         //numGrains.length();       //Primitves do not allow methods to be called on them
         System.out.println(name.length());
+
+        int i1 = 1_234;             //Underscores in a literal are allowed as long s they are between two digits.
+        //double d1 = 1_234_.0;     Does not compile coz the underscore is just before a decimal point of the literal.
+        //double d2 = 1_234._0;     Does not compile coz the underscore is just after a decimal point of the literal.
+        //double d3 = 1_234.0_;     Does not compile coz the underscore is at the end of the literal.
+        double d4 = 1_1234.0;       //Underscores in a literal are allowed as long s they are between two digits.
+
+        int amount = 0xE;
+        double amount0 = 0xE;
+        int amount1 = 0b101;
+        //int amount2 = 9L;           Does not compile - L is long primitive type specifier.
+        //double amount3 = 1_2_.0_0;  Does not compile coz the underscore is just after a decimal point of the literal.
+        //int amount4 = 1_2_;           Does not compile coz the underscore is at the end of the literal.
+
+        Rabbit rabbitOne = new Rabbit();    //A
+        Rabbit rabbitTwo = new Rabbit();    //B
+        Rabbit rabbitThree = rabbitOne;
+        rabbitOne = null;
+        Rabbit rabbitFour = rabbitOne;
+        rabbitThree = null;
+        rabbitTwo = null;
+        rabbitTwo = new Rabbit();           //C
+        System.gc();
     }
 }
