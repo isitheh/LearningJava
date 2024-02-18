@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.transport.Car;
+import org.example.transport.WaterBottle;
 
 import java.util.Random;    //Imports the Random Method into the local file.
 
@@ -35,6 +36,7 @@ public class Main {
 
         Primitives primitives = new Primitives();
         ReferencesAndObjects();
+        waterBottle();
     }
 
     /*
@@ -70,5 +72,24 @@ public class Main {
         //int  java.lang = 0;   //Invalid - dot not valid in identifiers.
         int Public = 0;         //Valid - public is a reserved keyword but not Public
         //int 1980_s = 0;       //Invalid - Identifier may not start with a number
+    }
+
+    /*
+    * empty is a boolean primitive variable and initializes to false.
+    * brand is a String non-primitive variable and initializes to null.
+    * */
+    private static void waterBottle() {
+        WaterBottle wb = new WaterBottle();
+        System.out.println("Empty = " + wb.empty);
+        System.out.println("Band = " + wb.brand);
+    }
+
+    private static void checkCompileErrors() {
+        short numPets = 5;
+        //int numGrains = 5.6;      //Line generates a compile error - given object is float integral.
+        String name = "Scruffy";
+        //numPets.length();         //Primitves do not allow methods to be called on them
+        //numGrains.length();       //Primitves do not allow methods to be called on them
+        System.out.println(name.length());
     }
 }
