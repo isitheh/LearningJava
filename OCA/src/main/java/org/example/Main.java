@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.operatorsandstatements.Operators;
 import org.example.transport.Car;
 import org.example.transport.WaterBottle;
 
@@ -37,6 +38,7 @@ public class Main {
         Primitives primitives = new Primitives();
         ReferencesAndObjects();
         waterBottle();
+        useOperators();
     }
 
     /*
@@ -114,5 +116,15 @@ public class Main {
         rabbitTwo = null;
         rabbitTwo = new Rabbit();           //C
         System.gc();
+    }
+
+    private static void useOperators() {
+        Operators operators = new Operators();
+        operators.precedence();
+        operators.divideVsModulo();
+        operators.numericalPromotion();
+        operators.operatorTypes();
+        operators.unaryOperators();
+        operators.assignmentOperators();
     }
 }
