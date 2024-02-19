@@ -178,11 +178,59 @@ public class Operators {
 
     public void assignmentOperators() {
         double x = 1;           //Assigns an integer 1 to a double variable x converts the 1 to a double literal 1.0
-        //int x1 = 1.0;         //Attempt to assign a double literal 1.0 into an int variable, compile error.
         //long ml = 123654897966788;   //The literal is assigned as an integer value hence the compile error.
         long ml2 = 123654897966788L;   //The literal is now assigned as a long by specifying the L at the end.
         //int z = 9.0;                 //Compile error assigning a floating point into an integer variable.
         //int z1 = 9.0f;               //Compile error assigning a floating point into an integer variable.
         System.out.println(x);
+
+        /*
+         * int x1 = 1.0;
+         * Attempts to assign a double literal 1.0 into an int variable, causing a compilation error.
+         * Use typecasting to forcefully convert a larger data type, this time double, into a smaller data type, int
+         */
+        int x1 = (int) 1.0;
+        System.out.println(x);
+
+        /*
+         * Overflowing
+         * An attempt to type cast a literal into a data type into which it can not fit causes the variable to overflow.
+         * In the example below, a primitive type byte range [-128, 127]. Assigned and type cast a value of 130.
+         * 130 overflows from the upper range by a value of 2. Hence, the literal wraps around back to -128 and adds
+         * the value to resulting in an answer of -126.
+         */
+        byte mByte = (byte) 130;
+        System.out.println("mByte = " + mByte);
+
+        /*
+         * Example:
+         * doVar1 and doVar2 declared as a short, get converted into an int because the Java compiler converts all
+         * (char, byte, short) literals into an int when a binary operation is performed on them.
+         * As a result, the multiplication operation performed in order to obtain doVar3 can not be stored into a short.
+         * The only way this will succeed is if the result of the operation (int) is type cast into a short.
+         */
+        short doVar1 = 10;
+        short doVar2 = 3;
+        short doVar3 = (short) (doVar1 * doVar2);
+        System.out.println("doVar3: " + doVar3);
+
+        //Compound Assignment Operations
+        int xVal = 5;
+        long yVal = 10;
+        xVal = (int)(xVal * yVal);      //Requires the result to be cast into int, otherwise throws a compilation err.
+        xVal *= yVal;                   //Automatically casts the resultant operation into an int (although lossy)
+        System.out.println("xVal: " + xVal);
+        System.out.println("yVal: " + yVal);
+
+        /*
+         * Example
+         * Step 1: xLong is assigned a value of 5
+         * Step 2: xLong is assigned a value of 3
+         * Step 3: yLong is assigned a value of 3 using value of xLong.
+         */
+        long xLong = 5;
+        long yLong = (xLong = 3);
+        System.out.println("xLong: " + xLong);
+        System.out.println("yLong: " + yLong);
     }
 }
