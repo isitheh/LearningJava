@@ -126,5 +126,7 @@ public class Main {
         operators.operatorTypes();
         operators.unaryOperators();
         operators.assignmentOperators();
+        operators.relationalOperators();
+        operators.equalityOperators();
     }
 }

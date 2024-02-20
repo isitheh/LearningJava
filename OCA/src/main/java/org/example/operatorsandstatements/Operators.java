@@ -1,5 +1,8 @@
 package org.example.operatorsandstatements;
 
+import java.io.File;
+import java.sql.SQLOutput;
+
 /*
  * @Author: Sithembiso Sithole
  */
@@ -115,6 +118,21 @@ public class Operators {
          */
         int c1 = 5;     //Converted to 0101
         System.out.println("Result = ~5 = " + ~c1);
+
+        /*
+         * Short Circuit Logical Operators
+         * If the left side of the || operation is true, the
+         * right side of the || does not need to be evaluated.
+         */
+        int x = 6;
+        boolean y = (x >= 6) || (++x <= 7);
+        System.out.println("Resultant x = " + x);
+        System.out.println("Resultant y = " + y);
+
+        int a = 6;
+        boolean b = (a >= 6) | (++a <= 7);
+        System.out.println("Resultant a = " + a);
+        System.out.println("Resultant b = " + b);
     }
 
     public void unaryOperators() {
@@ -232,5 +250,35 @@ public class Operators {
         long yLong = (xLong = 3);
         System.out.println("xLong: " + xLong);
         System.out.println("yLong: " + yLong);
+    }
+
+    public void relationalOperators() {
+        int x = 10, y = 20, z = 10;
+        System.out.println("[x = " + x + ", y = " + y + ", z = " + z + "]");
+        System.out.println("x > y: " + (x > y));
+        System.out.println("y >= x: " + (y >= x));
+        System.out.println("x >= z: " + (x >= z));
+    }
+
+    public void equalityOperators() {
+        int x = 5;
+        double y = 5.0;
+        //x gets promoted to a double upon == "
+        System.out.println(x == y);
+
+        /*
+         * Step 1: Assign boolean value of false to mY
+         * Step 2: Assign a boolean value of true to mY
+         * Step 3: Assign the value of mY to mX.
+         */
+        boolean mY = false;
+        boolean mX = (mY = true);
+        System.out.println(mX);
+
+        File filex = new File("testfile.txt");
+        File filey = new File("testfile.txt");
+        File filez = filex;
+        System.out.println("filex == filey: " + (filex == filey));
+        System.out.println("filez == filex: " + (filez == filex));
     }
 }
