@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.conditions.ConditionalStatements;
 import org.example.operatorsandstatements.Operators;
 import org.example.transport.Car;
 import org.example.transport.WaterBottle;
@@ -39,6 +40,7 @@ public class Main {
         ReferencesAndObjects();
         waterBottle();
         useOperators();
+        useConditionalStatements();
     }
 
     /*
@@ -128,5 +130,13 @@ public class Main {
         operators.assignmentOperators();
         operators.relationalOperators();
         operators.equalityOperators();
+    }
+
+    private static void useConditionalStatements() {
+        ConditionalStatements conditionals = new ConditionalStatements();
+        conditionals.exerciseConditionals();
+        conditionals.ternaryOperator();
+        conditionals.switchStatement();
+        conditionals.whileStatements();
     }
 }
