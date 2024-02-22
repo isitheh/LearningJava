@@ -138,5 +138,7 @@ public class Main {
         conditionals.ternaryOperator();
         conditionals.switchStatement();
         conditionals.whileStatements();
+        conditionals.forLoops();
+        conditionals.forEachLoops();
     }
 }

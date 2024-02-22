@@ -1,5 +1,7 @@
 package org.example.conditions;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /*
@@ -127,5 +129,59 @@ public class ConditionalStatements {
             counter--;
         } while(counter > rand);
         System.out.println("Loop is ending at: " + counter);
+    }
+
+    public void forLoops() {
+        //The for loop below will run infinitely.
+        /*for(;;) {
+            System.out.println("Hello For Loop World!");
+        }*/
+        /*
+         * For Loop Syntax:
+         * for(initializer; boolean expression; update statement) {
+         *      //Body
+         * }
+         * Step 1: Initializer executes
+         * Step 2: If boolean expression is true, continue, else exit the for loop.
+         * Step 3: Execute the body
+         * Step 4: Update statement executes
+         * Step 5: Go to Step 2
+         * Note: Initializer can have multiple comma separated statements with variables of the same type.
+         * Note: Boolean condition can evaluate multiple conditions
+         */
+        // Generate random integers in range 0 to 9
+        int rand = (new Random()).nextInt(10);
+        System.out.println("rand: " + rand);
+        for(long y = 0, z = 4; (rand < 5 && y < 10); rand++, y++) {
+            System.out.println("rand: " + rand);
+            System.out.println("y: " + y);
+        }
+
+        int x;
+        long y;
+        for(x = 2, y = 0; (x < 5 && y < 10); x++, y++) {
+            System.out.println("x: " + x);
+            System.out.println("y: " + y);
+        }
+    }
+
+    public void forEachLoops() {
+        final String[] names = new String[3];    //Array with 3 String elements
+        names[0] = "Jorge";
+        names[1] = "Muzi";
+        names[2] = "John";
+        for (String name: names) {
+            System.out.println("Hi! My name is: " + name);
+        }
+
+        List<String> mVals = new ArrayList<>();
+        mVals.add("Bheki");
+        mVals.add("Thabo");
+        mVals.add("Ziphi");
+        for (String val: mVals) {
+            System.out.println("Hi again! Now my name is: " + val);
+        }
+
+        //for (int name: names) {} //Does not compile because the names array is of type String not int
     }
 }
