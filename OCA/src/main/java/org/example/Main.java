@@ -140,5 +140,6 @@ public class Main {
         conditionals.whileStatements();
         conditionals.forLoops();
         conditionals.forEachLoops();
+        conditionals.nestedLoops();
     }
 }
