@@ -202,6 +202,39 @@ public class ConditionalStatements {
             x--;
             System.out.print(x + "\t");
         }
+
         System.out.println();
+        System.out.println();
+
+        int[][] mMatrix = {{2, 1, 3}, {9, 8, 9}, {5, 7, 12}};
+        for(int[] mList : mMatrix) {
+            for(int val : mList) {
+                System.out.print(val + "\t");
+            }
+            System.out.println();
+        }
+
+        //Do a search and break upon match found.
+        int searchVal = 8;
+        int xIndex = -1;
+        int yIndex = -1;
+
+        MAINLOOP : for(int i = 0; i < mMatrix.length; i++) {
+            //Search in each array of a matrix.
+            for(int j = 0; j < mMatrix[i].length; j++) {
+                //Check if a match has been found
+                if(mMatrix[i][j] == searchVal) {
+                    xIndex = i;
+                    yIndex = j;
+                    break MAINLOOP;
+                }
+            }
+        }
+
+        if(xIndex == -1 || yIndex == -1) {
+            System.out.println("No match has been found.");
+        } else {
+            System.out.println("Match has been found at position x: " + xIndex + " y: " + yIndex);
+        }
     }
 }
