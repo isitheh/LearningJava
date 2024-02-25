@@ -237,4 +237,43 @@ public class ConditionalStatements {
             System.out.println("Match has been found at position x: " + xIndex + " y: " + yIndex);
         }
     }
+
+    public void PossibleExamQuestions() {
+        byte xByte = 5;
+        byte yByte = 10;
+        int zByte = xByte + yByte;
+        System.out.println("zByte: " + zByte);
+        byte wByte = (byte) (xByte + yByte);
+        System.out.println("wByte: " + wByte);
+
+        long x = 10;
+        int y = (int) (2 *  x);
+        System.out.println("y: " + y);
+        System.out.println(x > 2 ? x < 4 ? 10 : 8 : 7);
+        int res = (x > 2) ? ((x < 4) ? 10 : 8 ) : 7;
+        System.out.println("Introduce Parentheses reduce confusion: " + res);
+        for(int i = 0; i < 10; ) {
+            i++;
+            //i=i++;
+            System.out.println(i);
+            System.out.println("Hello World!");
+        }
+
+        int xVal = 5 * 4 % 3;
+        int yVal = 3;
+        boolean b = xVal >= yVal;
+        System.out.println(xVal);
+        String s = null;
+        //if(x == s) {} Does not compile.
+        if(b=true) {
+            System.out.println("Success");
+        } else {
+            System.out.println("Failure");
+        }
+        boolean isTest = false;
+        System.out.println(isTest = true);
+        System.out.println(isTest = false);
+    }
+
+
 }

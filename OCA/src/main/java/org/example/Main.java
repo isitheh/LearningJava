@@ -141,5 +141,6 @@ public class Main {
         conditionals.forLoops();
         conditionals.forEachLoops();
         conditionals.nestedLoops();
+        conditionals.PossibleExamQuestions();
     }
 }
