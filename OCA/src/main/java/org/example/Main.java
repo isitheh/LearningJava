@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.chapter3.JavaCoreAPIs;
 import org.example.conditions.ConditionalStatements;
 import org.example.operatorsandstatements.Operators;
 import org.example.transport.Car;
@@ -41,6 +42,7 @@ public class Main {
         waterBottle();
         useOperators();
         useConditionalStatements();
+        useJavaCoreAPIs();
     }
 
     /*
@@ -142,5 +144,10 @@ public class Main {
         conditionals.forEachLoops();
         conditionals.nestedLoops();
         conditionals.PossibleExamQuestions();
+    }
+
+    private static void useJavaCoreAPIs() {
+        JavaCoreAPIs mJavaCoreAPIs = new JavaCoreAPIs();
+        mJavaCoreAPIs.concatenation();
     }
 }
