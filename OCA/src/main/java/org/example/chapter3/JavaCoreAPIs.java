@@ -11,7 +11,12 @@ public class JavaCoreAPIs {
      * See the two ways to define a string as below.
      */
     String name1 = "MyName";
-    String name2 = new String("AlsoMyName");
+    String name2 = new String("MyName"); //New object is created.
+    /*
+     * In the case of name1 and name2 above, the two strings have
+     * different pointers because name2 was created using the new
+     * keyword which creates a completely new object.
+     */
 
     public JavaCoreAPIs() {
         System.out.println("Print name1: " + name1);
