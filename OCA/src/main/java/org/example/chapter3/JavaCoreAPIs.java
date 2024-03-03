@@ -76,7 +76,8 @@ public class JavaCoreAPIs {
          * Purpose: Returns the first occurrence of the required character.
          * Support: A char or string can be passed to the overloaded function
          */
-        System.out.println("The index of a in our string is: " + );
+        System.out.println("The index of a in our string is: " + mString.indexOf('a'));
+        System.out.println("The index of 'is a' in our string is: " + mString.indexOf("is a"));
 
     }
 }
