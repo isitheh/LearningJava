@@ -1,5 +1,7 @@
 package org.example.chapter3;
 
+import java.util.Random;
+
 /*
  * @Author: Sithembiso Sithole
  */
@@ -23,13 +25,13 @@ public class JavaCoreAPIs {
         System.out.println("Print name2: " + name2);
     }
 
+    /*
+     * Rules regarding string concatenation:
+     * Rule 1: If all the operands joined by + are numeric, the operation is an addition, result is numeric.
+     * Rule 2: If any of the operands joined by the + is a String, the operation is concatenation, result is string.
+     * Rule 3: The expression is always evaluated from left to right.
+     */
     public void concatenation() {
-        /*
-         * Rules regarding string concatenation:
-         * Rule 1: If all the operands joined by + are numeric, the operation is an addition, result is numeric.
-         * Rule 2: If any of the operands joined by the + is a String, the operation is concatenation, result is string.
-         * Rule 3: The expression is always evaluated from left to right.
-         */
         int xVal = 1 + 25;
         System.out.println("xVal = " + xVal);
         //int sVal = 1 + "13";        Does not work because string result cannot be stored in an int variable.
@@ -47,5 +49,34 @@ public class JavaCoreAPIs {
         mString += "2";
         mString += 3;
         System.out.println(mString);
+    }
+
+    /*
+     * This function showcases all the methods relating to the String Type
+     */
+    public void stringMethods() {
+        String mString = "This is a string.";
+        /*
+         * Method: length
+         * Purpose: Indicates the number of characters in a string.
+         */
+        int mLen = mString.length();
+        System.out.println("The length of the string is: " + mLen);
+
+        /*
+         * Method: charAt(index)
+         * Purpose: Indicates the character at the given index of the string.
+         * Support: Generate random integers in range 0 to length of string.
+         */
+        int mIndex = (new Random()).nextInt(mLen);
+        System.out.println("The character at index " + mIndex + " is: " + mString.charAt(mIndex));
+
+        /*
+         * Method: indexOf("x")
+         * Purpose: Returns the first occurrence of the required character.
+         * Support: A char or string can be passed to the overloaded function
+         */
+        System.out.println("The index of a in our string is: " + );
+
     }
 }

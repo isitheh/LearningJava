@@ -274,6 +274,4 @@ public class ConditionalStatements {
         System.out.println(isTest = true);
         System.out.println(isTest = false);
     }
-
-
 }

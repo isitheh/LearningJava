@@ -149,5 +149,6 @@ public class Main {
     private static void useJavaCoreAPIs() {
         JavaCoreAPIs mJavaCoreAPIs = new JavaCoreAPIs();
         mJavaCoreAPIs.concatenation();
+        mJavaCoreAPIs.stringMethods();
     }
 }
