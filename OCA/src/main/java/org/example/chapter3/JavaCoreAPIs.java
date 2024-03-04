@@ -78,6 +78,7 @@ public class JavaCoreAPIs {
          */
         System.out.println("The index of a in our string is: " + mString.indexOf('a'));
         System.out.println("The index of 'is a' in our string is: " + mString.indexOf("is a"));
-
+        //Search for a character 'i' starting from index 6.
+        System.out.println("The index of char 'i' from index 6 onwards: " + mString.indexOf('i', 5));
     }
 }
